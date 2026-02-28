@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rudolftheorth.github.io/ergotherapie-saarwellingen/sitemap.xml
