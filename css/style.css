@@ -459,7 +459,7 @@ a:hover {
 
 .about-feature {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   padding: var(--space-sm);
   background: var(--clr-surface);
