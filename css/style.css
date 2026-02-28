@@ -3,7 +3,7 @@
    Design System & Styles – Blau/Blaugrau
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
   --clr-primary: #3B6B8A;
@@ -498,6 +498,18 @@ a:hover {
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: var(--clr-primary-dark);
+  text-align: right;
+  margin-top: -1.5rem;
+  margin-bottom: var(--space-md);
+  margin-right: 1rem;
+  transform: rotate(-4deg);
+  opacity: 0.9;
 }
 
 .about-image-card::before {
