@@ -1,27 +1,38 @@
-name: 🚀 Deploy to Strato via SFTP
+name: 🚀 Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
-    name: SFTP Deploy
+    name: Deploy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 🔄 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 📤 Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: 📦 Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📤 Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          ssh_private_key: ""
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local_path: './*'
-          remote_path: '/www/'
-          sftp_only: true
-          delete_remote_files: false
+          path: '.'
+
+      - name: 🌐 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -2,7 +2,7 @@
 
 Offizielle Website für **Aktives Leben – Praxis für Ergotherapie** in Saarwellingen.
 
-🌐 [Website besuchen](https://www.ergotherapie-saarwellingen.de)
+🌐 [Website besuchen](https://rudolftheorth.github.io/ergotherapie-saarwellingen/)
 
 ---
 
