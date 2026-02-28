@@ -505,11 +505,18 @@ a:hover {
   font-size: 2.5rem;
   color: var(--clr-primary-dark);
   text-align: right;
-  margin-top: -1.5rem;
+  margin-top: -3.5rem;
   margin-bottom: var(--space-md);
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   transform: rotate(-4deg);
-  opacity: 0.9;
+  position: relative;
+  z-index: 10;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff,
+    0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-image-card::before {
