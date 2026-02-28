@@ -415,8 +415,19 @@ a:hover {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-md) var(--space-xl);
   align-items: center;
+  grid-template-areas:
+    "text img"
+    "feat img";
+}
+
+.about-text {
+  grid-area: text;
+}
+
+.about-image {
+  grid-area: img;
 }
 
 .about-text h3 {
@@ -433,10 +444,11 @@ a:hover {
 }
 
 .about-features {
+  grid-area: feat;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-sm);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
 }
 
 .about-feature {
@@ -986,7 +998,14 @@ a:hover {
 /* --- Responsive --- */
 @media (max-width: 968px) {
 
-  .about-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "img"
+      "feat";
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
