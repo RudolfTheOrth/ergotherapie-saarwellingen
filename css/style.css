@@ -3,7 +3,7 @@
    Design System & Styles – Blau/Blaugrau
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+/* Google Fonts loaded via <link data-consent-src> in HTML (DSGVO) */
 
 :root {
   --clr-primary: #3B6B8A;
